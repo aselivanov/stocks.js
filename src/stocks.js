@@ -238,8 +238,4 @@ Stocks.prototype.MESSAGES = {
 };
 
 /** Export */
-if (typeof window === 'undefined') {
-  module.exports = Stocks; // Node.js
-} else {
-  window['Stocks'] = Stocks; // Browser
-}
+module.exports = Stocks;
