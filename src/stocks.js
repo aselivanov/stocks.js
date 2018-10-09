@@ -123,7 +123,7 @@ Stocks.prototype = {
 
       // Convert date to local time (dates from AV should be EDT)
       newSample['date'] = new Date(
-        Date.parse(key) + (240 - new Date().getTimezoneOffset()) * 60000
+        Date.parse(key.replace(' ', 'T')) + (240 - new Date().getTimezoneOffset()) * 60000
       );
 
       // Insert in new data
